@@ -1,0 +1,114 @@
+/* cStudio --- */
+
+/* Global Settings --- */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Background Effect --- */
+
+body {
+	position: relative;
+	min-height: 100vh;
+}
+
+.lines {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	margin: auto;
+	z-index: -5;
+}
+
+.line {
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	background: rgba(0, 0, 0, 0);
+	overflow: hidden;
+	z-index: -5;
+}
+
+.line::after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 15vh;
+	width: 100%;
+	top: -50%;
+	left: 0;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0) 0%,
+		#000 75%,
+		#000 100%
+	);
+	animation: drop 7s 0s infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line:nth-child(1) {
+	margin-left: -25%;
+}
+
+.line:nth-child(1)::after {
+	animation-delay: 2s;
+}
+
+.line:nth-child(3) {
+	margin-left: 25%;
+}
+
+.line:nth-child(3)::after {
+	animation-delay: 2.5s;
+}
+
+@keyframes drop {
+	0% {
+		top: -50%;
+	}
+	100% {
+		top: 110%;
+	}
+}
+
+/* Styles --- */
+
+a {
+	text-decoration: none;
+}
+
+h3 {
+	font-family: 'Cutive Mono', monospace;
+	color: #000;
+}
+
+/* Header --- */
+
+.head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 25px 50px;
+}
+
+.logo {
+	padding: 15px 25px;
+}
+
+.nav ul {
+	list-style-type: none;
+	display: flex;
+}
+
+.nav li {
+	padding: 15px 25px;
+}

@@ -12,7 +12,10 @@
 
 body {
 	position: relative;
+	max-width: 1000px;
 	min-height: 100vh;
+	margin: auto;
+	padding: 0 15px;
 }
 
 .lines {
@@ -55,20 +58,25 @@ body {
 	animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
 }
 
-.line:nth-child(1) {
+.line01 {
 	margin-left: -25%;
 }
-
-.line:nth-child(1)::after {
-	animation-delay: 2s;
+.line01::after {
+	animation-delay: 2.5s;
 }
 
-.line:nth-child(3) {
+.line02 {
+	margin-left: 0%;
+}
+.line02::after {
+	animation-delay: 1.5s;
+}
+
+.line03 {
 	margin-left: 25%;
 }
-
-.line:nth-child(3)::after {
-	animation-delay: 2.5s;
+.line03::after {
+	animation-delay: 3s;
 }
 
 @keyframes drop {
@@ -86,9 +94,36 @@ a {
 	text-decoration: none;
 }
 
-h3 {
-	font-family: 'Cutive Mono', monospace;
+h1,
+h2,
+h3,
+h4,
+p {
+	font-family: 'Barlow Condensed', sans-serif;
 	color: #000;
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 75px;
+}
+
+h2 {
+	font-size: 35px;
+	padding-bottom: 15px;
+}
+
+h3 {
+	font-size: 25px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+p {
+	font-size: 15px;
+	letter-spacing: 1.2px;
 }
 
 /* Header --- */
@@ -97,7 +132,8 @@ h3 {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 25px 50px;
+	padding: 25px 15px;
+	border-bottom: 1px solid #000;
 }
 
 .logo {
@@ -111,4 +147,48 @@ h3 {
 
 .nav li {
 	padding: 15px 25px;
+}
+
+/* Content --- */
+
+.section--50 {
+	width: 50%;
+	padding: 25px 15px;
+}
+
+.section--100 {
+	width: 100%;
+	padding: 25px 15px;
+}
+
+.section01 {
+	display: flex;
+}
+
+.hero-img {
+	width: 100%;
+}
+
+.section02 p {
+	padding-bottom: 15px;
+}
+
+.section03 p {
+	padding-bottom: 25px;
+}
+
+.slide01 {
+	display: flex;
+}
+
+.port-img {
+	width: 25%;
+}
+
+.port-text-cont {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 50%;
+	padding-left: 25px;
 }

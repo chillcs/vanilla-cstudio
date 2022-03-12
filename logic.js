@@ -1,7 +1,9 @@
 //
 // Define Variables ---
+const body = document.querySelector('body');
 const menu = document.querySelector('.menu');
-const menuBtn = document.querySelector('.menu-btn');
+const menuBtn = document.querySelector('.menu-btn-cont');
+const menuToggle = document.getElementById('menuToggle');
 const slides = document.querySelectorAll('.slide');
 const btn01 = document.querySelector('.btn01');
 const btn02 = document.querySelector('.btn02');
@@ -9,7 +11,20 @@ const btn02 = document.querySelector('.btn02');
 // Menu Toggle ---
 menuBtn.addEventListener('click', () => {
 	menu.classList.toggle('menu-mob');
+	body.classList.toggle('overflow');
 });
+//
+// Menu Toggle Reset on Screen Change ---
+function mediaIncrease(x) {
+	if (x.matches) {
+		menu.classList.remove('menu-mob');
+		body.classList.remove('overflow');
+		menuToggle.checked = false;
+	}
+}
+const x = window.matchMedia('(min-width: 650px)');
+mediaIncrease(x);
+x.addListener(mediaIncrease);
 //
 // Portfolio Slide Buttons ---
 var slideCount = 0;

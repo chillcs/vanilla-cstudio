@@ -5,8 +5,8 @@ const menu = document.querySelector('.menu');
 const menuBtn = document.querySelector('.menu-btn-cont');
 const menuToggle = document.getElementById('menuToggle');
 const slides = document.querySelectorAll('.slide');
-const btn01 = document.querySelector('.btn01');
-const btn02 = document.querySelector('.btn02');
+const btnSSL = document.getElementById('btnSSL');
+const btnSSR = document.getElementById('btnSSR');
 //
 // Menu Toggle ---
 menuBtn.addEventListener('click', () => {
@@ -29,9 +29,9 @@ x.addListener(mediaIncrease);
 // Portfolio Slide Buttons ---
 var slideCount = 0;
 if (slideCount === 0) {
-	btn01.classList.add('btn--dim');
+	btnSSL.classList.add('btn--dim');
 }
-btn01.addEventListener('click', () => {
+btnSSL.addEventListener('click', () => {
 	slideCount--;
 	if (slideCount >= 0) {
 		slides[slideCount + 1].classList.remove('slide--active');
@@ -40,13 +40,13 @@ btn01.addEventListener('click', () => {
 		slideCount++;
 	}
 	if (slideCount === 0) {
-		btn01.classList.add('btn--dim');
+		btnSSL.classList.add('btn--dim');
 	}
 	if (slideCount < slides.length - 1) {
-		btn02.classList.remove('btn--dim');
+		btnSSR.classList.remove('btn--dim');
 	}
 });
-btn02.addEventListener('click', () => {
+btnSSR.addEventListener('click', () => {
 	slideCount++;
 	if (slideCount < slides.length) {
 		slides[slideCount - 1].classList.remove('slide--active');
@@ -55,9 +55,9 @@ btn02.addEventListener('click', () => {
 		slideCount--;
 	}
 	if (slideCount === slides.length - 1) {
-		btn02.classList.add('btn--dim');
+		btnSSR.classList.add('btn--dim');
 	}
 	if (slideCount > 0) {
-		btn01.classList.remove('btn--dim');
+		btnSSL.classList.remove('btn--dim');
 	}
 });

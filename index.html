@@ -21,6 +21,7 @@
                   <li><a class="h-h3" href="">about</a></li>
                   <li><a class="h-h3" href="">portfolio</a></li>
                   <li><a class="h-h3" href="">contact</a></li>
+                  <li><a class="h-h3" href="">hire</a></li>
                </ul>
             </div>
             <input id="menuToggle" type="checkbox" />
@@ -35,12 +36,17 @@
          <div class="section01">
             <div class="section--100">
                <h1 class="h-h1">cStudio</h1>
-               <h2 class="h-h2">commerce x code development</h2>
+               <h2 class="h-h2">code x commerce</h2>
                <p class="p-p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dicta veritatis sunt nulla consectetur autem ipsum sit pariatur. Dolorum porro consequuntur omnis quis fuga suscipit sint dolorem aspernatur, voluptatum expedita.</p>
+               <div class="hero-icon-cont">
+                  <div id="icon-html" class="hero-icon"></div>
+                  <div id="icon-css" class="hero-icon"></div>
+                  <div id="icon-javascript" class="hero-icon"></div>
+                  <div id="icon-react" class="hero-icon"></div>
+                  <div id="icon-shopify" class="hero-icon"></div>
+               </div>
                <button class="btn">contact</button>
-            </div>
-            <div class="section--100">
-               <img class="hero-img" src="assets/tech01-nb.png">
+               <button class="btn">hire</button>
             </div>
          </div>
 
@@ -50,7 +56,16 @@
                <h2 class="h-h2">our vision</h2>
                <p class="p-p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dicta veritatis sunt nulla consectetur autem ipsum sit pariatur. Dolorum porro consequuntur omnis quis fuga suscipit sint dolorem aspernatur, voluptatum expedita.</p>
                <p class="p-p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dicta veritatis sunt nulla consectetur autem ipsum sit pariatur. Dolorum porro consequuntur omnis quis fuga suscipit sint dolorem aspernatur, voluptatum expedita.</p>
-               <p class="p-p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dicta veritatis sunt nulla consectetur autem ipsum sit pariatur. Dolorum porro consequuntur omnis quis fuga suscipit sint dolorem aspernatur, voluptatum expedita.</p>
+               <div class="about-cont">
+                  <div class="about-text">
+                     <p class="p-p1">Curtis Hill</p>
+                     <p class="p-p1">Freelance Developer</p>
+                     <p class="p-p1">curtis@cstudio.ca</p>
+                     <p class="p-p1">+1 (236) 562-5630</p>
+                     <p class="p-p1">Victoria, Canada</p>
+                  </div>
+                  <div id="img-me"></div>
+               </div>
             </div>
          </div>
 
@@ -60,42 +75,48 @@
                <h2 class="h-h2">our work</h2>
                <p class="p-p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dicta veritatis sunt nulla consectetur autem ipsum sit pariatur. Dolorum porro consequuntur omnis quis fuga suscipit sint dolorem aspernatur, voluptatum expedita.</p>
                <div class="slide-feature">
+                  <div class="slide-controls">
+                     <button id="btnSL" class="btn">‹</button>
+                     <button id="btnSR" class="btn">›</button>
+                  </div>
                   <div class="slide slide--active Fade">
-                     <div class="port-img-cont">
-                        <img class="port-img" src="assets/portfolio-demo-blue.jpg">
-                     </div>
+                     <div id="sImg01" class="port-img"></div>
+                     <div id="sImg02" class="port-img-next"></div>
                      <div class="port-text-cont">
                         <h4 class="h-h4 SL">02.16.2022</h4>
                         <h4 class="h-h4 SR">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</h4>
                         <p class="p-p1 SL">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.</p>
-                        <h4 class="h-h4 SR">READ MORE</h4>
+                        <div class="ext-btn-cont SR">
+                           <button class="btn" href="#">code</button>
+                           <button class="btn" href="#">test</button>
+                        </div>
                      </div>
                   </div>
                   <div class="slide Fade">
-                     <div class="port-img-cont">
-                        <img class="port-img" src="assets/portfolio-demo-green.jpg">
-                     </div>
+                     <div id="sImg02" class="port-img"></div>
+                     <div id="sImg03" class="port-img-next"></div>
                      <div class="port-text-cont">
                         <h4 class="h-h4 SL">02.16.2022</h4>
                         <h4 class="h-h4 SR">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</h4>
                         <p class="p-p1 SL">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.</p>
-                        <h4 class="h-h4 SR">READ MORE</h4>
+                        <div class="ext-btn-cont SR">
+                           <button class="btn" href="#">code</button>
+                           <button class="btn" href="#">test</button>
+                        </div>
                      </div>
                   </div>
                   <div class="slide Fade">
-                     <div class="port-img-cont">
-                        <img class="port-img" src="assets/portfolio-demo-red.jpg">
-                     </div>
+                     <div id="sImg03" class="port-img"></div>
+                     <div id="sImg01" class="port-img-next"></div>
                      <div class="port-text-cont">
                         <h4 class="h-h4 SL">02.16.2022</h4>
                         <h4 class="h-h4 SR">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</h4>
                         <p class="p-p1 SL">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.</p>
-                        <h4 class="h-h4 SR">READ MORE</h4>
+                        <div class="ext-btn-cont SR">
+                           <button class="btn" href="#">code</button>
+                           <button class="btn" href="#">test</button>
+                        </div>
                      </div>
-                  </div>
-                  <div class="port-btn-cont">
-                     <button id="btnSSL" class="btn-portfolio">‹</button>
-                     <button id="btnSSR" class="btn-portfolio">›</button>
                   </div>
                </div>
             </div>
